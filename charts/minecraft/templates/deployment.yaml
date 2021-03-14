@@ -149,6 +149,8 @@ spec:
           value: {{ .Values.minecraftServer.motd | quote }}
         - name: PVP
           value: {{ .Values.minecraftServer.pvp | quote }}
+        - name: ALLOW_FLIGHT
+          value: {{ .Values.minecraftServer.allowFlight | quote }}
         - name: LEVEL_TYPE
           value: {{ .Values.minecraftServer.levelType | quote }}
         - name: GENERATOR_SETTINGS
@@ -162,6 +164,10 @@ spec:
         {{- if .Values.minecraftServer.downloadModpackUrl }}
         - name: MODPACK
           value: {{ .Values.minecraftServer.downloadModpackUrl | quote }}
+        {{- if .Values.minecraftServer.downloadModpackConfigUrl }}
+        - name: MODCONFIG
+          value: {{ .Values.minecraftServer.downloadModpackConfigUrl | quote }}
+        {{- end }}
         {{- if .Values.minecraftServer.removeOldMods }}
         - name: REMOVE_OLD_MODS
           value: "TRUE"

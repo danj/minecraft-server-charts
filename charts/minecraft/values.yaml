@@ -135,6 +135,8 @@ minecraftServer:
   motd: "Welcome to Minecraft on Kubernetes!"
   # If true, enable player-vs-player damage.
   pvp: false
+  # allow flight mode
+  allowFlight: false
   # One of: DEFAULT, FLAT, LARGEBIOMES, AMPLIFIED, CUSTOMIZED
   levelType: DEFAULT
   # When levelType == FLAT or CUSTOMIZED, this can be used to further customize map generation.
@@ -147,6 +149,8 @@ minecraftServer:
   forceReDownload: false
   # If set, the modpack at this URL will be downloaded at startup
   downloadModpackUrl:
+  # If set, the modpack config archive at this URL will be be downloaded at startup
+  downloadModpackConfigUrl:
   # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
   removeOldMods: false
   # Check accounts against Minecraft account service.
